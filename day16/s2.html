@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   <!--  DOM 0 写法
+   <div id="i1">
+        <input type="text" id="i2" value="请输入关键字" onfocus="into()" onblur="outto()">
+    </div> 
+    <script type="text/javascript">
+        function into(){
+            var a = document.getElementById("i2");
+            a.value = "";
+        }
+        function outto(){
+            var a = document.getElementById("i2");
+            if(a.value == ""){
+                a.value = "请输入关键字";
+            }
+        }
+    </script> -->
+    <div>
+        <input type="text" id="i2" value="请输入关键字" />
+    </div>
+    <script type="text/javascript">
+        var a = document.getElementById("i2");
+        a.onfocus = function(){
+            if(a.value == "请输入关键字"){
+                a.value = "";
+            }
+        }
+        a.onblur = function(){
+            if(a.value.length == 0){
+                a.value = "请输入关键字";
+            }
+        }
+    </script>
+</body>
+</html>

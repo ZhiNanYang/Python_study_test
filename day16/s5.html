@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件添加</title>
+    <style type="text/css">
+        .hide{
+            display: none;
+        }
+        .item .header{
+            background-color: #2459a2;
+            height: 35px;
+            line-height: 35px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- 第一种绑定事件方法 -->
+    <!-- <div style="height: 48px"></div>
+    <div style="width: 300px">
+        <div class="item">
+            <div id="l1" class="header" onclick="ChangeMenu(this);">菜单1</div>
+            <div class="hide">
+                <div>内容1</div>
+                <div>内容2</div>
+                <div>内容3</div>
+            </div>
+        </div>
+        <div class="item">
+            <div id="l2" class="header" onclick="ChangeMenu(this);">菜单2</div>
+            <div class="hide">
+                <div>内容1</div>
+                <div>内容2</div>
+                <div>内容3</div>
+            </div>
+        </div>
+        <div class="item">
+            <div id="l3" class="header" onclick="ChangeMenu(this);">菜单3</div>
+            <div class="hide">
+                <div>内容1</div>
+                <div>内容2</div>
+                <div>内容3</div>
+            </div>
+        </div>
+        <div class="item">
+            <div id="l4" class="header" onclick="ChangeMenu(this);">菜单4</div>
+            <div class="hide">
+                <div>内容1</div>
+                <div>内容2</div>
+                <div>内容3</div>
+            </div>
+        </div>
+        
+    </div>
+    <script type="text/javascript">
+        function ChangeMenu(self){
+            var cr_header = self;
+            console.log(self)
+            var item_list = cr_header.parentNode.parentNode.children;
+            for (var i = 0; i < item_list.length; i++) {
+                var cr_item = item_list[i];
+                cr_item.children[1].classList.add('hide');
+            }
+            cr_header.nextElementSibling.classList.remove('hide');
+        }
+
+    </script> -->
+    <!-- 添加事件方法二 -->
+    <div style="height: 48px"></div>
+    <div style="width: 300px">
+        <div class="item">
+            <div id="l1" class="header">菜单1</div>
+            <div class="hide">
+                <div>内容1</div>
+                <div>内容2</div>
+                <div>内容3</div>
+            </div>
+        </div>
+        <div class="item">
+            <div id="l2" class="header">菜单2</div>
+            <div class="hide">
+                <div>内容1</div>
+                <div>内容2</div>
+                <div>内容3</div>
+            </div>
+        </div>
+        <div class="item">
+            <div id="l3" class="header">菜单3</div>
+            <div class="hide">
+                <div>内容1</div>
+                <div>内容2</div>
+                <div>内容3</div>
+            </div>
+        </div>
+        <div class="item">
+            <div id="l4" class="header">菜单4</div>
+            <div class="hide">
+                <div>内容1</div>
+                <div>内容2</div>
+                <div>内容3</div>
+            </div>
+        </div> 
+    </div>
+    <div style="width: 200px;background-color: red;height: 100px;" id="t3">
+            <div style="width: 100px;background-color: black;height: 50px;" id="t4">
+            </div>
+    </div>
+
+    <script type="text/javascript">
+        //第三种绑定事件方式 
+        var thirdFun = document.getElementById('t3');
+        var fourFun = document.getElementById('t4');
+        thirdFun.addEventListener("click",function(){console.log("aaa")}, false);
+        thirdFun.addEventListener("click",function(){console.log("bbb")}, false);
+        fourFun.addEventListener("click",function(){console.log("ccc")}, false);
+        //第二种绑定事件方式
+        document.getElementById('l1').onclick = function(){
+            changeMenu(this);
+        }
+        document.getElementById('l2').onclick = function(){
+            changeMenu(this);
+        }
+        document.getElementById('l3').onclick = function(){
+            changeMenu(this);
+        }
+        document.getElementById('l4').onclick = function(){
+            changeMenu(this);
+        }
+        function changeMenu(self){
+            var cr_header = self;
+            var item_list = cr_header.parentNode.parentNode.children;
+            for (var i = 0; i < item_list.length; i++) {
+                var cr_item = item_list[i];
+                cr_item.children[1].classList.add('hide');
+            }
+            cr_header.nextElementSibling.classList.remove('hide');
+        }       
+
+    </script>
+</body>
+</html>

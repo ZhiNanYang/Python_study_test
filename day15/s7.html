@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        .c1{
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: black;
+            opacity: 0.6;
+            z-index: 9;
+        }
+        .c2{
+            width: 500px;
+            height: 400px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-top: -250px;
+            margin-left: -200px;
+            z-index: 10;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="button" value="添加" onclick="showModle();" />
+        <input type="button" value="全选" onclick="chooceAll();" />
+        <input type="button" value="取消" onclick="cancleAll();" />
+        <input type="button" value="反选" onclick="reverceAll();" />
+        <table>
+            <thead>
+                <tr>
+                    <th>选择</th>
+                    <th>主机名</th>
+                    <th>端口</th>
+                </tr>
+            </thead>
+            <tbody id="tb">
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>192.168.3.21</td>
+                    <td>8000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>192.168.3.244</td>
+                    <td>8000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>192.168.3.69</td>
+                    <td>8000</td>
+                </tr>
+            </tbody>            
+        </table>        
+    </div>
+    <div id="z1" class="c1 hide"></div>
+    <div id="z2" class="c2 hide">
+        <p><input type="text" /></p>
+        <p><input type="text" /></p>
+        <p>
+            <input type="button" value="取消" onclick="hideModle();" />
+            <input type="button" value="确定" />
+        </p>
+    </div>
+    <script type="text/javascript">
+        function showModle(){
+            document.getElementById('z1').classList.remove('hide');
+            document.getElementById('z2').classList.remove('hide');
+        }
+        function hideModle(){
+            document.getElementById('z1').classList.add('hide');
+            document.getElementById('z2').classList.add('hide');
+        }
+        function chooceAll(){
+            var tbody = document.getElementById('tb');
+            var tr_list = tbody.children;
+            for(var i=0;i<tr_list.length;i++){
+                var now_tr = tr_list[i];
+                var checkbox = now_tr.children[0].children[0];
+                checkbox.checked = true;
+            }
+        }
+        function cancleAll(){
+            var tbody = document.getElementById('tb');
+            var tr_list = tbody.children;
+            for(var i=0;i<tr_list.length;i++){
+                var now_tr = tr_list[i];
+                var checkbox = now_tr.children[0].children[0];
+                checkbox.checked = false;
+            }
+        }
+        function reverceAll(){
+            var tbody = document.getElementById('tb');
+            var tr_list = tbody.children;
+            for(var i=0;i<tr_list.length;i++){
+                var now_tr = tr_list[i];
+                var checkbox = now_tr.children[0].children[0];
+                if (checkbox.checked) {
+                    checkbox.checked = false;
+                }
+                else{
+                    checkbox.checked = true;
+                }
+            }    
+        }
+    </script>
+</body>
+</html>

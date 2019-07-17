@@ -1,0 +1,15 @@
+1.协程
+    Greenlet
+    Gevent
+
+2.RabbitMQ(队列)
+    先安装Erlang,再安装rabbitmq，再安装python rabbitmq module(pip install pika)
+    http://www.rabbitmq.com/install-standalone-mac.html
+
+3.pymysql (mysql数据库)
+    
+4.SQLAlchemy ORM
+    ORM英文全称object relational mapping,就是对象映射关系程序，简单来说我们类似python这种面向对象的程序来说一切皆对象，但是我们使用的数据库却都是关系型的，为了保证一致的使用习惯，通过orm将编程语言的对象模型和数据库的关系模型建立映射关系，这样我们在使用编程语言对数据库进行操作的时候可以直接使用编程语言的对象模型进行操作就可以了，而不用直接使用sql语言。
+5.pyyaml
+6.traceback
+7.sqlalchemy_utils

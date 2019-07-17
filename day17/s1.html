@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        .model{
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: black;
+            z-index: 8;
+            opacity: 0.5;
+        }
+        .hide{
+            display: none;
+        }
+        .addmodel{
+            position: fixed;
+            left: 50%;
+            top:50%;
+            width: 500px;
+            height: 400px;
+            margin-left: -250px;
+            margin-top: -200px;
+            z-index: 10;
+            background-color: #eeeeee;
+        }
+    </style>
+</head>
+<body>
+    <div class="model hide"></div>
+    <div class="addmodel hide">
+        <input type="text" name="ip" />
+        <input type="text" name="port" />
+        <p>
+            <input type="button" value="取消" onclick="cancleAdd();" />
+            <input type="button" value="确定" />
+        </p>
+    </div>
+    <p>
+        <input type="button" value="全选" onclick="checkAll();">
+        <input type="button" value="反选" onclick="reverAll();">
+        <input type="button" value="取消" onclick="cancleAll();">
+    </p>
+    <a onclick="addElement();">添加</a>
+    <table border="1px">
+        <thead>
+            <th>选项</th>
+            <th>IP</th>
+            <th>端口</th>
+            <th>操作</th>
+        </thead>
+        <tr>
+            <td>
+               <input type="checkbox" \> 
+            </td>
+            <td target="ip">192.168.1.33</td>
+            <td target="port">80</td>
+            <td>
+                <a class="edit">编辑</a> | <a>删除</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+               <input type="checkbox" \> 
+            </td>
+            <td target="ip">192.168.3.56</td>
+            <td target="port">8000</td>
+            <td>
+                <a class="edit">编辑</a> | <a>删除</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+               <input type="checkbox" \> 
+            </td>
+            <td target="ip">192.168.1.56</td>
+            <td target="port">2323</td>
+            <td>
+                <a class="edit">编辑</a> | <a>删除</a>
+            </td>
+        </tr>
+    </table>
+    <script type="text/javascript" src="jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        function checkAll(){
+            $(':checkbox').prop('checked', true);
+        }
+        function cancleAll(){            
+            $(':checkbox').prop('checked', false);
+        }
+        function reverAll(){
+            // 1.DOM方法
+            // $(':checkbox').each(function() {
+            //     if(this.checked){
+            //         this.checked = false;
+            //     }else{
+            //         this.checked = true;
+            //     }
+            // });
+
+            // 2.jQuery方法
+            // $(':checkbox').each(function(index, el) {
+            //     if ($(this).prop('checked')){
+            //         $(this).prop('checked', false);
+            //     }else {
+            //         $(this).prop('checked', true);
+            //     }
+            // });
+
+            // 3.三元运算
+            $(':checkbox').each(function(index, el) {
+                var v = $(this).prop('checked') ? false : true;
+                $(this).prop('checked', v); 
+            });
+        }
+        function addElement(){
+            $(".model,.addmodel").removeClass('hide');
+        }
+        function cancleAdd(){
+            $(".model,.addmodel").addClass('hide');
+            $('.addmodel input[name="ip"]').val("");
+            $('.addmodel input[name="port"]').val("");
+        }
+        $(".edit").click(function() {
+            $(".model,.addmodel").removeClass('hide');
+            var tds = $(this).parent().siblings();
+            //方法一，不易维护
+            // var ip = $(tds[1]).text();
+            // var port = $(tds[2]).text();
+            // $('.addmodel input[name="ip"]').val(ip);
+            // $('.addmodel input[name="port"]').val(port);
+            //方法二，可随意添加随意添加
+            $(tds).each(function(index, el) {
+                var v = $(this).attr('target');
+                var n = $(this).text();
+                $(".addmodel input[name='" + v +"']").val(n);
+            });
+        });
+    </script>
+</body>
+</html>

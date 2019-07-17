@@ -1,0 +1,131 @@
+2019-05-30T11:01:07.515092Z 0 [System] [MY-013169] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld.exe (mysqld 8.0.16) initializing of server in progress as process 4648
+2019-05-30T11:01:36.847143Z 5 [Note] [MY-010454] [Server] A temporary password is generated for root@localhost: uONk<?zU&9%Q
+2019-05-30T11:01:53.882373Z 0 [System] [MY-013170] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld.exe (mysqld 8.0.16) initializing of server has completed
+2019-05-30T11:02:37.952449Z 0 [System] [MY-010116] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld (mysqld 8.0.16) starting as process 700
+2019-05-30T11:02:44.738461Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2019-05-30T11:02:44.941262Z 0 [System] [MY-010931] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: ready for connections. Version: '8.0.16'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2019-05-30T11:02:45.206462Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2019-05-30T11:11:44.463288Z 0 [System] [MY-013105] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: Normal shutdown.
+2019-05-30T11:11:46.475692Z 0 [System] [MY-010910] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: Shutdown complete (mysqld 8.0.16)  MySQL Community Server - GPL.
+2019-05-30T23:39:32.575636Z 0 [System] [MY-010116] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld (mysqld 8.0.16) starting as process 1692
+2019-05-30T23:39:32.731637Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2019-05-30T23:39:40.126049Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2019-05-30T23:39:40.500450Z 0 [System] [MY-010931] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: ready for connections. Version: '8.0.16'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2019-05-30T23:39:40.656450Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2019-05-31T09:31:59.386508Z 0 [System] [MY-013105] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: Normal shutdown.
+2019-05-31T09:32:13.098932Z 0 [System] [MY-010910] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: Shutdown complete (mysqld 8.0.16)  MySQL Community Server - GPL.
+2019-06-02T23:50:17.886039Z 0 [System] [MY-010116] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld (mysqld 8.0.16) starting as process 1712
+2019-06-02T23:50:18.026439Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2019-06-02T23:50:27.074455Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2019-06-02T23:50:27.749256Z 0 [System] [MY-010931] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: ready for connections. Version: '8.0.16'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2019-06-02T23:50:28.009256Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2019-06-03T11:35:10.165995Z 0 [System] [MY-013105] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: Normal shutdown.
+2019-06-03T23:53:30.279304Z 0 [System] [MY-010116] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld (mysqld 8.0.16) starting as process 1512
+2019-06-03T23:53:30.341704Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2019-06-03T23:53:37.798517Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2019-06-03T23:53:38.297718Z 0 [System] [MY-010931] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: ready for connections. Version: '8.0.16'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2019-06-03T23:53:39.015319Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2019-06-03T23:54:53.021848Z 0 [System] [MY-013105] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: Normal shutdown.
+2019-06-03T23:54:54.503851Z 0 [System] [MY-010910] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: Shutdown complete (mysqld 8.0.16)  MySQL Community Server - GPL.
+2019-06-03T23:56:06.318878Z 0 [System] [MY-010116] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld (mysqld 8.0.16) starting as process 1516
+2019-06-03T23:56:06.474878Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2019-06-03T23:56:13.338890Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2019-06-03T23:56:13.557290Z 0 [System] [MY-010931] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: ready for connections. Version: '8.0.16'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2019-06-03T23:56:13.947291Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2019-06-04T00:39:12.670391Z 0 [System] [MY-013105] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: Normal shutdown.
+2019-06-04T00:39:16.398797Z 0 [System] [MY-010910] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: Shutdown complete (mysqld 8.0.16)  MySQL Community Server - GPL.
+2019-06-04T00:40:22.074455Z 0 [System] [MY-010116] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld (mysqld 8.0.16) starting as process 1740
+2019-06-04T00:40:22.230455Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2019-06-04T00:40:28.267665Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2019-06-04T00:40:28.688866Z 0 [System] [MY-010931] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: ready for connections. Version: '8.0.16'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2019-06-04T00:40:28.891666Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2019-06-04T10:54:23.180596Z 0 [System] [MY-013105] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: Normal shutdown.
+2019-06-04T10:54:33.929015Z 0 [System] [MY-010910] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: Shutdown complete (mysqld 8.0.16)  MySQL Community Server - GPL.
+2019-06-04T23:49:36.416440Z 0 [System] [MY-010116] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld (mysqld 8.0.16) starting as process 1672
+2019-06-04T23:49:36.572440Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2019-06-04T23:49:44.044853Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2019-06-04T23:49:44.294453Z 0 [System] [MY-010931] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: ready for connections. Version: '8.0.16'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2019-06-04T23:49:44.840454Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2019-06-05T00:29:06.830012Z 0 [System] [MY-013105] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: Normal shutdown.
+2019-06-05T00:29:10.730019Z 0 [System] [MY-010910] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: Shutdown complete (mysqld 8.0.16)  MySQL Community Server - GPL.
+2019-06-05T00:30:12.185636Z 0 [System] [MY-010116] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld (mysqld 8.0.16) starting as process 1588
+2019-06-05T00:30:12.326036Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2019-06-05T00:30:19.860849Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2019-06-05T00:30:20.079249Z 0 [System] [MY-010931] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: ready for connections. Version: '8.0.16'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2019-06-05T00:30:20.422450Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2019-06-06T09:29:50.065904Z 0 [System] [MY-013105] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: Normal shutdown.
+2019-06-06T09:29:52.608708Z 0 [System] [MY-010910] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: Shutdown complete (mysqld 8.0.16)  MySQL Community Server - GPL.
+2019-06-07T01:19:39.622436Z 0 [System] [MY-010116] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld (mysqld 8.0.16) starting as process 1616
+2019-06-07T01:19:39.778437Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2019-06-07T01:19:48.887667Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2019-06-07T01:19:49.097667Z 0 [System] [MY-010931] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: ready for connections. Version: '8.0.16'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2019-06-07T01:19:49.187668Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2019-06-07T02:09:50.697240Z 0 [System] [MY-010116] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld (mysqld 8.0.16) starting as process 1676
+2019-06-07T02:09:50.853240Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2019-06-07T02:09:57.498852Z 0 [System] [MY-010229] [Server] Starting crash recovery...
+2019-06-07T02:09:57.514452Z 0 [System] [MY-010232] [Server] Crash recovery finished.
+2019-06-07T02:09:58.996454Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2019-06-07T02:09:59.714056Z 0 [System] [MY-010931] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: ready for connections. Version: '8.0.16'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2019-06-07T02:09:59.916856Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2019-06-07T08:22:18.892064Z 0 [System] [MY-013105] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: Normal shutdown.
+2019-06-07T08:22:27.877679Z 0 [System] [MY-010910] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: Shutdown complete (mysqld 8.0.16)  MySQL Community Server - GPL.
+2019-06-08T04:02:26.012437Z 0 [System] [MY-010116] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld (mysqld 8.0.16) starting as process 1660
+2019-06-08T04:02:26.168437Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2019-06-08T04:02:34.233651Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2019-06-08T04:02:34.639252Z 0 [System] [MY-010931] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: ready for connections. Version: '8.0.16'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2019-06-08T04:02:34.795252Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2019-06-08T09:16:06.101008Z 0 [System] [MY-013105] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: Normal shutdown.
+2019-06-09T23:52:03.087241Z 0 [System] [MY-010116] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld (mysqld 8.0.16) starting as process 1740
+2019-06-09T23:52:03.243241Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2019-06-09T23:52:11.770064Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2019-06-09T23:52:12.250065Z 0 [System] [MY-010931] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: ready for connections. Version: '8.0.16'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2019-06-09T23:52:12.442066Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2019-06-11T11:02:26.647765Z 0 [System] [MY-013105] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: Normal shutdown.
+2019-06-11T23:52:42.232436Z 0 [System] [MY-010116] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld (mysqld 8.0.16) starting as process 1684
+2019-06-11T23:52:42.622436Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2019-06-11T23:52:49.424048Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2019-06-11T23:52:50.266450Z 0 [System] [MY-010931] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: ready for connections. Version: '8.0.16'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2019-06-11T23:52:50.500450Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2019-06-12T10:46:52.879422Z 0 [System] [MY-013105] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: Normal shutdown.
+2019-06-12T23:54:33.650440Z 0 [System] [MY-010116] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld (mysqld 8.0.16) starting as process 1812
+2019-06-12T23:54:33.806440Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2019-06-12T23:54:40.623652Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2019-06-12T23:54:41.466054Z 0 [System] [MY-010931] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: ready for connections. Version: '8.0.16'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2019-06-12T23:54:41.824854Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2019-06-13T10:42:38.600852Z 0 [System] [MY-013105] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: Normal shutdown.
+2019-06-13T10:42:55.199281Z 0 [System] [MY-010910] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: Shutdown complete (mysqld 8.0.16)  MySQL Community Server - GPL.
+2019-06-13T23:50:35.430441Z 0 [System] [MY-010116] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld (mysqld 8.0.16) starting as process 1828
+2019-06-13T23:50:35.586442Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2019-06-13T23:50:43.729267Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2019-06-13T23:50:43.951269Z 0 [System] [MY-010931] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: ready for connections. Version: '8.0.16'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2019-06-13T23:50:44.051269Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2019-06-14T11:18:18.787300Z 0 [System] [MY-013105] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: Normal shutdown.
+2019-06-14T11:18:33.342126Z 0 [System] [MY-010910] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: Shutdown complete (mysqld 8.0.16)  MySQL Community Server - GPL.
+2019-06-16T23:58:39.684836Z 0 [System] [MY-010116] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld (mysqld 8.0.16) starting as process 1704
+2019-06-16T23:58:39.887637Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2019-06-16T23:58:46.970049Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2019-06-16T23:58:47.531650Z 0 [System] [MY-010931] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: ready for connections. Version: '8.0.16'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2019-06-16T23:58:47.890451Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2019-06-17T06:32:15.759334Z 0 [System] [MY-013105] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: Normal shutdown.
+2019-06-17T06:32:19.440940Z 0 [System] [MY-010910] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: Shutdown complete (mysqld 8.0.16)  MySQL Community Server - GPL.
+2019-06-17T06:33:38.670835Z 0 [System] [MY-010116] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld (mysqld 8.0.16) starting as process 1684
+2019-06-17T06:33:38.811235Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2019-06-17T06:33:46.002848Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2019-06-17T06:33:46.400049Z 0 [System] [MY-010931] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: ready for connections. Version: '8.0.16'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2019-06-17T06:33:46.692054Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2019-06-17T10:56:13.868258Z 0 [System] [MY-013105] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: Normal shutdown.
+2019-06-17T10:56:17.893065Z 0 [System] [MY-010910] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: Shutdown complete (mysqld 8.0.16)  MySQL Community Server - GPL.
+2019-06-17T23:52:26.614445Z 0 [System] [MY-010116] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld (mysqld 8.0.16) starting as process 1700
+2019-06-17T23:52:26.770445Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2019-06-17T23:52:35.228871Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2019-06-17T23:52:35.578872Z 0 [System] [MY-010931] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: ready for connections. Version: '8.0.16'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2019-06-17T23:52:35.850876Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2019-06-18T23:51:44.241260Z 0 [System] [MY-010116] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld (mysqld 8.0.16) starting as process 1804
+2019-06-18T23:51:44.397260Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2019-06-18T23:51:52.870876Z 0 [System] [MY-010229] [Server] Starting crash recovery...
+2019-06-18T23:51:52.890876Z 0 [System] [MY-010232] [Server] Crash recovery finished.
+2019-06-18T23:51:54.262879Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2019-06-18T23:51:54.502880Z 0 [System] [MY-010931] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: ready for connections. Version: '8.0.16'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2019-06-18T23:51:54.776883Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2019-06-19T00:04:32.551936Z 0 [System] [MY-013105] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: Normal shutdown.
+2019-06-19T00:04:34.134796Z 0 [System] [MY-010910] [Server] D:\Program Files (x86)\mysql-8.0.16-winx64\bin\mysqld: Shutdown complete (mysqld 8.0.16)  MySQL Community Server - GPL.

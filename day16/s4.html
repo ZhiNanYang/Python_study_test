@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 提交表单 -->
+    <form id="f1" action="http://www.baidu.com">
+        <input type="submit" value="提交">
+        <a onclick="submitForm();">提交</a>
+    </form>
+    <div id="i1"></div>
+    <div id="i2"></div>
+    <!-- setTimeout实例 -->
+    <input type="button" value="删除" onclick="delEle();" />
+    <input type="button" value="停止" onclick="stopDelEle();" />
+    <div>
+        <!-- setInterval实例 -->
+        <input type="button" value="开始计数" onclick="startnum();">
+        <input type="button" value="停止计数" onclick="stopnum();">
+    </div>
+    <script type="text/javascript">
+        function submitForm(){
+            document.getElementById('f1').submit();
+        } 
+        function delEle(){
+            document.getElementById('i2').innerText = "已删除！";            
+            o1 = setTimeout(function(){
+                document.getElementById('i2').innerText = "";
+            }, 3000);
+        }
+        function stopDelEle(){
+            clearTimeout(o1);
+        }
+        function startnum(){
+            o2 = setInterval(function(){
+                console.log(1);
+            }, 1000);
+        }
+        function stopnum(){
+            clearInterval(o2);
+        }
+
+    </script>
+</body>
+</html>

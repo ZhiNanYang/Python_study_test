@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <table border='1' width='300px'>
+        <tr><td>1</td><td>2</td><td>3</td></tr>
+        <tr><td>1</td><td>2</td><td>3</td></tr>
+        <tr><td>1</td><td>2</td><td>3</td></tr>
+    </table>
+    <script type="text/javascript">
+        var myTrs = document.getElementsByTagName('tr');
+        for(var i=0;i<myTrs.length;i++){
+            myTrs[i].onmouseover = function(){
+                this.style.backgroundColor = "red";
+            }
+            myTrs[i].onmouseout = function(){
+                this.style.backgroundColor = "";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+salary,4400 
+redmi,    1599
+coding,    49
+mi, 2599
+iphone, 5000

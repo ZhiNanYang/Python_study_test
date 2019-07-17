@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+     
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        .pg-header{
+            color: white;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #2B2690;
+            height: 48px;
+            margin: 0;
+            line-height: 48px;
+        }
+        .pg-header .loge{
+            width: 200px;
+            text-align: center;
+            background-color: #2B2650;
+        }
+        .right{
+            float: right;
+        }
+        .left{
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="pg-header">
+        <div id="i1" class="loge left">LOGE</div>
+    </div>
+    <div  id="i2" style="margin-top: 48px;">
+        <p>
+            <input type="button" value="+" onclick="addInput()" />
+            <input type="button" value="+" onclick="addInput1()" />
+        </p>
+    </div>
+    <script type="text/javascript">
+        var obj = document.getElementById("i1");
+        obj.classList.remove("left");
+        obj.style.float = "right";
+        obj.style.backgroundColor = "red";
+        obj.attributes;
+        obj.getAttribute("id");
+        obj.removeAttribute("id");
+        function addInput(){
+            var tag = "<p><input type='text' value='1' /></p>";
+            document.getElementById('i2').insertAdjacentHTML("beforeEnd", tag);             
+        }
+        function addInput1(){
+            var tag = document.createElement('input');
+            tag.setAttribute('type', 'text');
+            tag.setAttribute('value', '2');
+            tag.style.color = 'red';
+            var p = document.createElement('p');
+            p.appendChild(tag);
+            // document.getElementById('i2').appendChild(p);
+            document.getElementById('i2').insertBefore(p, document.getElementById('i2'));
+        } 
+    </script>
+</body>
+</html>

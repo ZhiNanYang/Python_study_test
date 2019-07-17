@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理后台</title>
+    <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        .pg-header{
+            height: 48px;
+            background-color: #1362C5;
+            line-height: 48px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: 0;
+            color: white;
+        }
+        .pg-header .loge{
+            width: 200px;
+            background-color: #1052A6;
+            text-align: center;
+        }
+        .pg-header .user{
+            height: 48px;
+            margin-right: 20px;
+            position: relative;
+            padding: 0 20px;
+        }
+        .pg-header .user:hover{
+            background-color: #1052A6;
+        }
+        .pg-header .user a img{
+            margin-top: 4px;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+        }
+        .pg-header .user .menu{
+            background-color: white;
+            position: absolute;
+            top: 48px;
+            right: 20px;
+            color: black;
+            width: 100px;
+            display: none;
+            text-align: center;  
+            z-index: 20;          
+        }
+        .pg-header .user:hover .menu{
+            display: block;
+        }
+        .pg-header .user .menu a{
+            display: block;
+            /*border: 1px solid black;*/
+        }
+        .pg-header .icons{
+            padding: 0 20px;
+        }
+        .pg-header .icons:hover{
+            background-color: #1052A6;
+        }
+        .pg-header .icons .num{
+            background-color: #68A7F7;
+            border-radius: 50%;
+            padding: 1px 7px;
+        }
+        .pg-content .menu{
+            position: absolute;
+            top: 48px;
+            bottom: 0;
+            left: 0;
+            width: 200px;
+            background-color: #B3AAAA;
+        }
+        .pg-content .content{
+            position: absolute;
+            top: 48px;
+            bottom: 0;
+            right: 0;
+            left: 200px;
+            background-color: #90B3F7;     
+            overflow: auto;
+            z-index: 15;       
+        }
+        .left{
+            float: left;
+        }
+        .right{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+   <div class="pg-header">
+       <div class="loge left">LOGE</div>
+       <div class="user right">
+            <a>
+               <img src="12.jpg">
+            </a>
+            <div class="menu">
+               <a>我的资料</a>
+               <a>注销</a>
+            </div>
+       </div>
+       <div class="icons right">
+            <i class="fa fa-bell-o" aria-hidden="true"></i>
+            <span class="num">5</span>
+       </div>       
+       <div class="icons right">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            <span class="num">5</span>
+       </div>
+   </div> 
+   <div class="pg-content">
+        <div class="menu">as</div>
+        <div class="content">
+            <p>asd</p><p>asd</p><p>asd</p><p>asd</p><p>asd</p>
+            <p>asd</p><p>asd</p><p>asd</p><p>asd</p><p>asd</p>
+            <p>asd</p><p>asd</p><p>asd</p><p>asd</p><p>asd</p>
+            <p>asd</p><p>asd</p><p>asd</p><p>asd</p><p>asd</p>
+            <p>asd</p><p>asd</p><p>asd</p><p>asd</p><p>asd</p>
+            <p>asd</p><p>asd</p><p>asd</p><p>asd</p><p>asd</p>
+            <p>asd</p><p>asd</p><p>asd</p><p>asd</p><p>asd</p>
+        </div>
+   </div> 
+   <div class="pg-footer">
+       
+   </div> 
+</body>
+</html>

@@ -1,0 +1,4 @@
+2016-02-17 15:58:01,778 - transaction - WARNING - warn message
+2016-02-17 15:58:01,778 - transaction - ERROR - error message
+2016-02-17 15:58:01,778 - transaction - CRITICAL - critical message
+2016-02-17 17:43:09,001 - transaction - INFO - account:1234   
