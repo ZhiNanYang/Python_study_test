@@ -42,10 +42,18 @@
     </div>
     <script src="jquery-1.12.4.js"></script>
     <script type="text/javascript">
+        //1.用属性定位        
+        // $('.menu_item').click(function() {
+        //     $(this).addClass('active').siblings().removeClass('active');
+        //     var tag = '[b="' + $(this).attr('a') +'"]';
+        //     $(tag).removeClass('hide').siblings().addClass('hide');
+        // });
+
+        //2.用索引定位
         $('.menu_item').click(function() {
             $(this).addClass('active').siblings().removeClass('active');
-            var tag = '[b="' + $(this).attr('a') +'"]';
-            $(tag).removeClass('hide').siblings().addClass('hide');
+            var v = $(this).index();
+            $('.content').children().eq(v).removeClass('hide').siblings().addClass('hide');
         });
     </script>
 </body>
