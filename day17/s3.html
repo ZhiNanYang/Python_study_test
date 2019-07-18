@@ -3,8 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <style type="text/css">
+        .menu{
+            height: 38px;
+            line-height: 38px;
+            background-color: #eeeeee;
+        }
+        .menu .menu_item{
+            float: left;
+            border-right: 1px solid red;
+            padding: 0 5px;  
+            cursor: pointer;          
+        }
+        .hide{
+            display: none;
+        }
+        .active{
+            background-color: red;
+        }
+        .content{
+            border:1px solid #dddddd;
+            min-height: 100px;
+        }
+    </style>
 </head>
 <body>
-   <h1>Hello,GitHub!</h1> 
+    <div style="width: 500px;margin: 0 auto">
+        <div class="menu">
+            <div class="menu_item active" a='1'>菜单一</div>
+            <div class="menu_item" a='2'>菜单二</div>
+            <div class="menu_item" a='3'>菜单三</div>
+        </div>
+        <div class="content">
+            <div b='1'>内容一</div>
+            <div class="hide" b='2'>内容二</div>
+            <div class="hide" b='3'>内容三</div>
+        </div>    
+    </div>
+    <script src="jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        $('.menu_item').click(function() {
+            $(this).addClass('active').siblings().removeClass('active');
+            var tag = '[b="' + $(this).attr('a') +'"]';
+            $(tag).removeClass('hide').siblings().addClass('hide');
+        });
+    </script>
 </body>
 </html>
