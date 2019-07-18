@@ -22,7 +22,7 @@
             left: 50%;
             top:50%;
             width: 500px;
-            height: 400px;
+            height: 200px;
             margin-left: -250px;
             margin-top: -200px;
             z-index: 10;
@@ -37,7 +37,7 @@
         <input type="text" name="port" />
         <p>
             <input type="button" value="取消" onclick="cancleAdd();" />
-            <input type="button" value="确定" />
+            <input type="button" value="确定" onclick="confirmAdd()" />
         </p>
     </div>
     <p>
@@ -46,7 +46,7 @@
         <input type="button" value="取消" onclick="cancleAll();">
     </p>
     <a onclick="addElement();">添加</a>
-    <table border="1px">
+    <table border="1px" id="t1">
         <thead>
             <th>选项</th>
             <th>IP</th>
@@ -60,7 +60,7 @@
             <td target="ip">192.168.1.33</td>
             <td target="port">80</td>
             <td>
-                <a class="edit">编辑</a> | <a>删除</a>
+                <a class="edit">编辑</a> | <a class="del">删除</a>
             </td>
         </tr>
         <tr>
@@ -70,7 +70,7 @@
             <td target="ip">192.168.3.56</td>
             <td target="port">8000</td>
             <td>
-                <a class="edit">编辑</a> | <a>删除</a>
+                <a class="edit">编辑</a> | <a class="del">删除</a>
             </td>
         </tr>
         <tr>
@@ -80,7 +80,7 @@
             <td target="ip">192.168.1.56</td>
             <td target="port">2323</td>
             <td>
-                <a class="edit">编辑</a> | <a>删除</a>
+                <a class="edit">编辑</a> | <a class="del">删除</a>
             </td>
         </tr>
     </table>
@@ -125,6 +125,24 @@
             $('.addmodel input[name="ip"]').val("");
             $('.addmodel input[name="port"]').val("");
         }
+        function confirmAdd(){
+            var cb = document.createElement('input');
+            cb.setAttribute('type', 'checkbox');
+            var td1 = document.createElement('td');
+            td1.append(cb);
+            var td2 = document.createElement('td');
+            td2.innerHTML = "11.11.11.11";
+            var td3 = document.createElement('td');
+            td3.innerHTML = "8001";
+            var tr = document.createElement('tr');
+            tr.append(td1);
+            tr.append(td2);
+            tr.append(td3);
+            $('#t1').append(tr);
+            $(".model,.addmodel").addClass('hide');
+            $('.addmodel input[name="ip"]').val("");
+            $('.addmodel input[name="port"]').val("");
+        }
         $(".edit").click(function() {
             $(".model,.addmodel").removeClass('hide');
             var tds = $(this).parent().siblings();
@@ -139,6 +157,9 @@
                 var n = $(this).text();
                 $(".addmodel input[name='" + v +"']").val(n);
             });
+        });
+        $('.del').click(function() {
+            $(this).parent().parent().remove();
         });
     </script>
 </body>
