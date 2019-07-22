@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style type="text/css">
+            .content{
+                padding: 50px;
+                border-bottom: 1px solid black;                
+            }
+            .item{
+                position: relative;
+                width: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <div class="item">
+                <span>赞</span>
+            </div>
+        </div>
+        <div class="content">
+            <div class="item">
+                <span>赞</span>
+            </div>
+        </div>
+        <div class="content">
+            <div class="item">
+                <span>赞</span>
+            </div>
+        </div>
+        <div class="content">
+            <div class="item">
+                <span>赞</span>
+            </div>
+        </div>
+        <script src="jquery-1.12.4.js"></script>
+        <script type="text/javascript">
+            $(".item").click(function() {
+                 addCss(this);
+            });
+            function addCss(self){
+                var fontSize = 15;
+                var opacity = 1;
+                var top = 0;
+                var right = 0;
+
+                var zan = document.createElement("span");                
+                $(zan).text('+1');
+                $(zan).css('color', "green");
+                $(zan).css('position', 'absolute');
+                $(zan).css('opacity', opacity);
+                $(zan).css('top', top + "px");
+                $(zan).css('right', right + "px");
+                $(zan).css('fontSize', fontSize + "px");
+                $(self).append(zan);
+
+                var obj = setInterval(function(){
+                     fontSize = fontSize + 5;
+                     opacity = opacity - 0.2;
+                     top = top - 10;
+                     right = right - 10;
+
+                    $(zan).css('opacity', opacity);
+                    $(zan).css('top', top + "px");
+                    $(zan).css('right', right + "px");
+                    $(zan).css('fontSize', fontSize + "px");
+
+                    if (opacity < 0) {
+                        clearInterval(obj);
+                        $(zan).remove();
+                    }
+                }, 40);
+            }
+        </script>
+    </body>
+    </html>    
