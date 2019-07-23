@@ -195,40 +195,32 @@ jQuery
 			
 			
 			$('i1').height()           # 获取标签的高度 纯高度
-			$('i1').innerHeight()      # 获取边框 + 纯高度 + ？
-			$('i1').outerHeight()      # 获取边框 + 纯高度 + ？
-			$('i1').outerHeight(true)  # 获取边框 + 纯高度 + ？
+			$('i1').innerHeight()      # 纯高度		
+			$('i1').outerHeight()      # 获取边框 + 纯高度
+			$('i1').outerHeight(true)  # 获取边框 + 纯高度 + 留白	
 			
 			# 纯高度，边框，外边距，内边距
 			
 		事件
 			DOM： 三种绑定方式
-				jQuery：
-					$('.c1').click()
-					$('.c1').....
-					
-					$('.c1').bind('click',function(){
-						
-					})
-					
-					$('.c1').unbind('click',function(){
-						
-					})
-					
-					*******************
+
+			jQuery：
+				$('.c1').click() 绑定事件
+				$('.c1').....    解绑事件
+				
+				$('.c1').bind('click',function(){})   绑定事件			
+				$('.c1').unbind('click',function(){}) 解绑事件
+				
+				*******************
+				委托，添加事件
 					$('.c').delegate('a', 'click', function(){
-					
-					})
+					}) 绑定事件
 					$('.c').undelegate('a', 'click', function(){
-					
-					})
-					
-					$('.c1').on('click', function(){
-					
-					})
-					$('.c1').off('click', function(){
-					
-					})
+					}) 解绑事件
+
+				******************
+				$('.c1').on('click', function(){}) 绑定事件
+				$('.c1').off('click', function(){}) 解绑事件
 					
 				阻止事件发生
 					return false
@@ -255,15 +247,6 @@ jQuery
 ===》实例：
 
 作业：
-	一：
-			$('i1').height()           # 获取标签的高度 纯高度
-			$('i1').innerHeight()      # 获取边框 + 纯高度 + ？
-			$('i1').outerHeight()      # 获取边框 + 纯高度 + ？
-			$('i1').outerHeight(true)  # 获取边框 + 纯高度 + ？
-			
-			# 纯高度，边框，外边距，内边距
-			
-	二、所有实例敲一遍
 	
 	三、编辑框
 	
