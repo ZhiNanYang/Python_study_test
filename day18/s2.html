@@ -3,20 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet"  href="bxslider-4-4.2.12/src/css/jquery.bxslider.css">    
+    <link rel="stylesheet"  href="bxslider-4-4.2.12/dist/jquery.bxslider.css">    
 </head>
 <body>
       <div class="slider">
-        <div>I am a slide.</div>
+        <div >I am a slide.</div>
         <div>I am another slide.</div>
         <div>这是轮播图</div>
       </div>
 
     <script src="jquery-1.12.4.js"></script>
-    <script src="bxslider-4-4.2.12/src/js/jquery.bxslider.js"></script>
+    <script src="bxslider-4-4.2.12/dist/jquery.bxslider.js"></script>
     <script>
       $(document).ready(function(){
-            $('.slider').bxSlider();
+            $('.slider').bxSlider({
+                auto: true,
+                // autoControls: true,
+                // stopAutoOnClick: true,
+                pager: true,
+                // slideWidth: 600
+              });
+
       });
     </script>
 </body>
