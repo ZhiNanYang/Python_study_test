@@ -1,2 +1,2 @@
-b = "你好".encode()
+b = "你好"
 print(b)
