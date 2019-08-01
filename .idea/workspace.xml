@@ -9,7 +9,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,6 +43,11 @@
             <path>
               <item name="yzn" type="b2602c69:ProjectViewProjectNode" />
               <item name="yzn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yzn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yzn" type="462c0819:PsiDirectoryNode" />
+              <item name="day18" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -158,11 +163,12 @@
       <workItem from="1564132912103" duration="326000" />
       <workItem from="1564133374740" duration="132000" />
       <workItem from="1564392865844" duration="77000" />
+      <workItem from="1564464234451" duration="291000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1565000" />
+    <option name="totallyTimeSpent" value="1856000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -176,7 +182,7 @@
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1458" height="870" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22976878" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23410405" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
