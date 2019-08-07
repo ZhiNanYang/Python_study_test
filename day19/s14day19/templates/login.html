@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <style type="text/css">
+        label{
+            text-align: right;
+            width: 80px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <form action="/login/" method="post" enctype="multipart/form-data">
+        <p>
+            <label for="username">用户名：</label>
+            <input id='username' type="text" name="user" />
+        </p>
+        <p>
+            <label for="password">密码：</label>
+            <input id='password' type="password" name="pwd" />
+        </p>
+        <p>
+            <input type="radio" name="gend" value="male" />男
+            <input type="radio" name="gend" value="female" />女
+        </p>
+        <p>
+            <input type="checkbox" name="aihao" value="football">足球
+            <input type="checkbox" name="aihao" value="basketball">篮球
+        </p>
+        <p>
+            <input type="file" name="fafafa">
+        </p>
+        <p>
+            <select name="city1">
+                <option value="sh">上海</option>
+                <option value="bj">北京</option>
+                <option value="gz">广州</option>
+            </select>
+        </p>        
+        <p>
+            <select name="city2" multiple>
+                <option value="sh">上海</option>
+                <option value="bj">北京</option>
+                <option value="gz">广州</option>
+            </select>
+        </p>
+        <p>
+            <input type="submit" value="提交" />
+            <span style="color: red;">{{error_msg}}</span>
+        </p>
+
+    </form>
+</body>
+</html>
