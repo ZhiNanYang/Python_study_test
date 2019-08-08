@@ -2,16 +2,40 @@ from django.shortcuts import render
 from django.shortcuts import redirect
 from django.views import View
 import os
-# from django.shortcuts import HttpResponse
+from django.shortcuts import HttpResponse
 
 
 USER_LIST = [
     {"username": "", "email": "", "gender": ""},
 ]
 
+# USER_DICT = {
+#     'k1': "root1",
+#     'k2': "root2",
+#     'k3': "root3",
+#     'k4': "root4",
+# }
+USER_DICT = {
+    '1': {'name': 'root1', 'email': 'root1@live.com'},
+    '2': {'name': 'root2', 'email': 'root2@live.com'},
+    '3': {'name': 'root3', 'email': 'root3@live.com'},
+    '4': {'name': 'root4', 'email': 'root4@live.com'},
+}
+
+
+def detail(request, nid):
+    # return HttpResponse(nid)
+    detail_info = USER_DICT[nid]
+    return render(request, "detail.html", {"detail_info": detail_info})
+
+
+# def detail(request):
+#     nid = request.GET.get("nid")
+#     detail_info = USER_DICT[nid]
+#     return render(request, "detail.html", {"detail_info": detail_info})
+
 
 def login(request):
-    error_msg = ""
     if request.method == "POST":
 
         # radio
@@ -62,10 +86,16 @@ def home(request):
 class Index(View):
     """docstring for Index"""
 
+    def dispatch(self, request, *args, **kwargs):
+        print("before dispatch")
+        result = super(Index, self).dispatch(request, *args, ** kwargs)
+        print("after dispatch")
+        return result
+
     def get(self, request):
         print(request.method)
         return render(request, 'index.html')
 
     def post(self, request):
         print(request.method)
-        return render(request, 'index.html')
+        return render(request, 'index.html', {"user_dict": USER_DICT})

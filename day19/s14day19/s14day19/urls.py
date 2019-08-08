@@ -16,11 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from app1 import views
-
+from django.urls import re_path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', views.login),
     path('home/', views.home),
+    # path('detail/', views.detail),
+    re_path('detail-(\d+).html', views.detail),
     path('index/', views.Index.as_view()),
 ]
