@@ -23,6 +23,7 @@ urlpatterns = [
     path('login/', views.login),
     path('home/', views.home),
     # path('detail/', views.detail),
-    re_path('detail-(\d+).html', views.detail),
+    # re_path('detail-(\d+).html', views.detail),
+    re_path('detail-(?P<nid>\d+)-(?P<uid>\d+).html', views.detail),
     path('index/', views.Index.as_view()),
 ]
