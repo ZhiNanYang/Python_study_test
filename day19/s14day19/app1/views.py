@@ -103,10 +103,10 @@ class Index(View):
         print("after dispatch")
         return result
 
-    def get(self, request):
+    def get(self, request, nid):
         print(request.method)
         return render(request, 'index.html')
 
-    def post(self, request):
+    def post(self, request, nid):
         print(request.method)
         return render(request, 'index.html', {"user_dict": USER_DICT})

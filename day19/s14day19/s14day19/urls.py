@@ -25,5 +25,5 @@ urlpatterns = [
     # path('detail/', views.detail),
     re_path('detail-(\d+).html', views.detail),
     # re_path('detail-(?P<nid>\d+)-(?P<uid>\d+).html', views.detail),
-    path('indasdfsdaex/', views.Index.as_view(), name='index'),
+    re_path('indasdfasdfsdfdex/(\d+)/', views.Index.as_view(), name='indexx'),
 ]
