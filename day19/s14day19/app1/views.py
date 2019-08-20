@@ -28,16 +28,16 @@ USER_DICT = {
 #     return HttpResponse(args, kwargs)
 
 
-def detail(request, nid, uid):
-    print(nid, uid)
-    detail_info = USER_DICT[nid]
-    return render(request, "detail.html", {"detail_info": detail_info})
-
-
-# def detail(request, nid):
-#     # return HttpResponse(nid)
+# def detail(request, nid, uid):
+#     print(nid, uid)
 #     detail_info = USER_DICT[nid]
 #     return render(request, "detail.html", {"detail_info": detail_info})
+
+
+def detail(request, nid):
+    # return HttpResponse(nid)
+    detail_info = USER_DICT[nid]
+    return render(request, "detail.html", {"detail_info": detail_info})
 
 
 # def detail(request):
