@@ -5,7 +5,7 @@
     <title>Index</title>
 </head>
 <body>
-    <form action="{{ request.path_info }}" method="post">
+    <form action="{% url 'i3' uid=1 nid=3 %}" method="post">
         <input type="text" />        
         <input type="submit" value="提交" />        
     </form>

@@ -3,6 +3,7 @@ from django.shortcuts import redirect
 from django.views import View
 import os
 from django.shortcuts import HttpResponse
+from django.urls import reverse
 
 
 USER_LIST = [
@@ -103,10 +104,11 @@ class Index(View):
         print("after dispatch")
         return result
 
-    def get(self, request, nid):
+    def get(self, request, *args, **kwargs):
         print(request.method)
         return render(request, 'index.html')
 
-    def post(self, request, nid):
-        print(request.method)
+    def post(self, request, *args, **kwargs):
+        url1 = reverse('i3', kwargs={"uid": 2, "nid": 22})
+        print(url1)
         return render(request, 'index.html', {"user_dict": USER_DICT})
