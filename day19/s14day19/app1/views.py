@@ -48,6 +48,7 @@ def detail(request, nid):
 
 
 def login(request):
+    error_msg = ""
     if request.method == "POST":
 
         # radio
@@ -78,7 +79,7 @@ def login(request):
         user = request.POST.get('user', None)
         pwd = request.POST.get('pwd', None)
         if user == "root" and pwd == "123":
-            return redirect('/home')
+            return redirect('/cmdb/home')
         else:
             error_msg = "用户名或密码错误"
 
