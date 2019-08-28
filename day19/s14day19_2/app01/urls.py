@@ -22,5 +22,6 @@ urlpatterns = [
     # path('index/', views.index),
     path('user_info/', views.user_info),
     re_path('userinfo-detail-(?P<nid>\d+)/', views.user_detail),
+    re_path('user-del-(?P<nid>\d+)/', views.user_del),
     path('orm/', views.orm),
 ]

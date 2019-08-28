@@ -18,11 +18,22 @@ def login(request):
 
 
 def user_info(request):
-    userset = models.UserInfo.objects.all()
-    return render(request, 'user_info.html', {'userset': userset})
+    if request.method == "GET":
+        userset = models.UserInfo.objects.all()
+        return render(request, 'user_info.html', {'userset': userset})
+    elif request.method == "POST":
+        user = request.POST.get("username")
+        psw = request.POST.get("password")
+        models.UserInfo.objects.create(username=user, password=psw)
+        return redirect("/cmdb/user_info")
 
 
 def user_detail(request, nid):
+    user = models.UserInfo.objects.filter(id=nid).first()
+    return render(request, "userinfo_detail.html", {'user': user})
+
+
+def user_del(request, nid):
     user = models.UserInfo.objects.filter(id=nid).first()
     return render(request, "userinfo_detail.html", {'user': user})
 
