@@ -9,17 +9,26 @@ def login(request):
         username = request.POST.get("username")
         psw = request.POST.get('password')
         obj = models.UserInfo.objects.filter(username=username, password=psw)
-        print(obj)
         if obj:
-            # return render(request, 'index.html')
-            return redirect('/cmdb/index/')
+            return render(request, 'index.html')
+            # return redirect('/cmdb/index/')
         else:
             error_msg = "用户名或密码错误！"
     return render(request, 'login.html', {'error_msg': error_msg})
 
 
-def index(request):
-    return render(request, 'index.html')
+def user_info(request):
+    userset = models.UserInfo.objects.all()
+    return render(request, 'user_info.html', {'userset': userset})
+
+
+def user_detail(request, nid):
+    user = models.UserInfo.objects.filter(id=nid).first()
+    return render(request, "userinfo_detail.html", {'user': user})
+
+
+# def index(request):
+#     return render(request, 'index.html')
 
 
 def orm(request):

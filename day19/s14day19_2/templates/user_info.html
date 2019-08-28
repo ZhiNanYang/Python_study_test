@@ -38,7 +38,7 @@
 </head>
 <body>
     <div class="head">
-        信息查询系统
+        用户信息
     </div>
     <div>
         <div class='menu'>
@@ -46,7 +46,13 @@
             <a class="item" href="/cmdb/user_group/">用户组信息</a>
         </div>
         <div class="content">
-            
+            <ul>
+                {% for row in userset %} 
+                    <li>
+                        <a href="/cmdb/userinfo-detail-{{row.id}}/">{{row.username}}</a>
+                    </li>
+                {% endfor %}
+            </ul>
         </div>
     </div>
 </body>
