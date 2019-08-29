@@ -4,6 +4,11 @@ from app01 import models
 
 # Create your views here.
 def login(request):
+    # models.UserGroup.objects.create(caption='DBA')
+    # models.UserGroup.objects.filter(uid="1").update(caption="DBB")
+    # obj = models.UserGroup.objects.filter(uid="1").first()
+    # obj.caption="DBB"
+    # obj.save()
     error_msg = ''
     if request.method == 'POST':
         username = request.POST.get("username")
