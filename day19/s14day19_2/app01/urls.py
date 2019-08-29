@@ -23,5 +23,6 @@ urlpatterns = [
     path('user_info/', views.user_info),
     re_path('userinfo-detail-(?P<nid>\d+)/', views.user_detail),
     re_path('user-del-(?P<nid>\d+)/', views.user_del),
+    re_path('user-edit-(?P<nid>\d+)/', views.user_edit),
     path('orm/', views.orm),
 ]

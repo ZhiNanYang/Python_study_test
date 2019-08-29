@@ -46,22 +46,13 @@
             <a class="item" href="/cmdb/user_group/">用户组信息</a>
         </div>
         <div class="content">
-            <h3>新增用户</h3>
-            <form action="/cmdb/user_info/" method="POST">
-                <input type="text" name="username" placeholder="用户名" />
-                <input type="text" name="password" placeholder="密码" />
-                <input type="submit" value="添加">
+            <h3>编辑用户信息</h3>
+            <form action="/cmdb/user-edit-{{ obj.id }}/" method="POST">
+                <input style="display: none;" type="text" name="id" value="{{obj.id}}" />
+                <input type="text" name="user" value="{{obj.username}}" />
+                <input type="text" name="psw" value="{{obj.password}}" />
+                <input type="submit" value="更新" />
             </form>
-            <h3>用户信息</h3>
-            <ul>
-                {% for row in userset %} 
-                    <li>
-                        <a href="/cmdb/userinfo-detail-{{row.id}}/">{{row.username}}</a> 
-                        | <a href="/cmdb/user-del-{{row.id}}/">删除</a>
-                        | <a href="/cmdb/user-edit-{{row.id}}/">编辑</a>
-                    </li>
-                {% endfor %}
-            </ul>
         </div>
     </div>
 </body>

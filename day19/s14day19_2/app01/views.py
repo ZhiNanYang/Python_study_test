@@ -34,12 +34,21 @@ def user_detail(request, nid):
 
 
 def user_del(request, nid):
-    user = models.UserInfo.objects.filter(id=nid).first()
-    return render(request, "userinfo_detail.html", {'user': user})
+    models.UserInfo.objects.filter(id=nid).delete()
+    return redirect('/cmdb/user_info')
 
 
-# def index(request):
-#     return render(request, 'index.html')
+def user_edit(request, nid):
+    if request.method == "GET":
+        obj = models.UserInfo.objects.filter(id=nid).first()
+        return render(request, 'user_edit.html', {'obj': obj})
+    if request.method == 'POST':
+        nid = request.POST.get('id')
+        user = request.POST.get('user')
+        psw = request.POST.get('psw')
+        models.UserInfo.objects.filter(id=nid).update(
+            username=user, password=psw)
+        return redirect('/cmdb/user_info')
 
 
 def orm(request):
