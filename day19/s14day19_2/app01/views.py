@@ -25,11 +25,15 @@ def login(request):
 def user_info(request):
     if request.method == "GET":
         userset = models.UserInfo.objects.all()
-        return render(request, 'user_info.html', {'userset': userset})
+        group_list = models.UserGroup.objects.all()
+        return render(request, 'user_info.html', {'userset': userset, 'group_list': group_list})
     elif request.method == "POST":
         user = request.POST.get("username")
         psw = request.POST.get("password")
-        models.UserInfo.objects.create(username=user, password=psw)
+        cp = request.POST.get("cp")
+        models.UserInfo.objects.create(
+            username=user, password=psw, user_group_id=cp
+        )
         return redirect("/cmdb/user_info")
 
 

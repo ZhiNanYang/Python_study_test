@@ -50,6 +50,12 @@
             <form action="/cmdb/user_info/" method="POST">
                 <input type="text" name="username" placeholder="用户名" />
                 <input type="text" name="password" placeholder="密码" />
+                <select name="cp">
+                    {% for item in group_list %}
+                        <option value="{{ item.uid }}">{{ item.caption }}
+                        </option>
+                    {% endfor %}
+                </select>
                 <input type="submit" value="添加">
             </form>
             <h3>用户信息</h3>
@@ -57,6 +63,7 @@
                 {% for row in userset %} 
                     <li>
                         <a href="/cmdb/userinfo-detail-{{row.id}}/">{{row.username}}</a> 
+                        | {{ row.user_group.caption }}
                         | <a href="/cmdb/user-del-{{row.id}}/">删除</a>
                         | <a href="/cmdb/user-edit-{{row.id}}/">编辑</a>
                     </li>
