@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Busines(models.Model):
+class Business(models.Model):
     caption = models.CharField(max_length=32)
     code = models.CharField(max_length=32, null=True)
 
