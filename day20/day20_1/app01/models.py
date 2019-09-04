@@ -11,3 +11,4 @@ class HOST(models.Model):
     hostname = models.CharField(max_length=32, db_index=True)
     ip = models.GenericIPAddressField(protocol='ipv4', db_index=True)
     port = models.IntegerField()
+    b = models.ForeignKey(to='Business', to_field='id', on_delete=models.CASCADE)

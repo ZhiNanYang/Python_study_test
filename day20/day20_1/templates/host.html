@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Business</title>
+</head>
+<body>
+    <h1>业务线列表（对象）</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>主机名</th>
+                <th>IP</th>
+                <th>端口</th>
+                <th>业务线名称</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in v1 %}
+                <tr hid="{{ id.nid }}" bid="{{ id.b_id }}">
+                    <td>{{ i.hostname }}</td>
+                    <td>{{ i.ip }}</td>
+                    <td>{{ i.port }}</td>
+                    <td>{{ i.b.caption }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h1>业务线列表（字典）</h1>
+    {% for i in v2 %}
+        <li>{{ i.hostname }}-{{ i.ip }}-{{ i.port }}</li>
+    {% endfor %}
+    <h1>业务线列表（元组）</h1>
+    {% for i in v3 %}
+        <li>{{ i.0 }}-{{ i.1 }}-{{ i.2 }}</li>
+    {% endfor %}
+</body>
+</html>

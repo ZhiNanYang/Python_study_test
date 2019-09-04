@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '4vjl&vl-$o_g*21x_h45pgt(e7)5^4ij$&adok-koi+45i=-aa'
+SECRET_KEY = '5@vj$k($ww9#0&8wqdsp5=i*p9ux5xt9lg^u3ruq0ple&59qcx'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'day20_1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [BASE_DIR, os.path.join('templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -120,5 +120,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIR = (
-    os.path.join(BASE_DIR, 'static'),
+    [BASE_DIR, os.path.join('static')],
 )
