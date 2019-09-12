@@ -49,7 +49,9 @@
                     <td>{{ i.ip }}</td>
                     <td>{{ i.port }}</td>
                     <td>{{ i.b.caption }}</td>
-                   
+                    <td>
+                        <a>编辑</a>|<a>删除</a>
+                    </td>
                 </tr>
             {% endfor %}
         </tbody>
@@ -80,6 +82,7 @@
             <input type="submit" value="提交" />
             <a id="ajax_submit" style="border: 1px solid #AAAAAA" >悄悄提交</a>
             <input id="cancel" type="button" value="取消" />
+            <span id='error_msg' style="color: red"></span>
         </form>
     </div>
     <script src="/static/jquery-1.12.4.js"></script>
@@ -103,10 +106,11 @@
                             'sel': $('#sel').val()
                           },
                     success: function(data){
-                        if(data == 'OK'){
+                        var obj = JSON.parse(data);
+                        if(obj.status){
                             location.reload()
                         }else {
-                            alert(data)
+                            $('#error_msg').text(obj.error)
                         }
                     }
                 })

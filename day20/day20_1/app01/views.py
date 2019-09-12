@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse, redirect
 from app01 import models
+import json
 # Create your views here.
 
 
@@ -12,7 +13,7 @@ def host(request):
     if request.method == "GET":
         v1 = models.HOST.objects.all()
         v2 = models.HOST.objects.filter(nid__gt=0).values(
-            'hostname', 'ip', 'port', 'b__caption')
+            'hostname', 'ip', 'port', 'b__caption')+
         # for row in v2:
         #     print(row['b__caption'])
         v3 = models.HOST.objects.filter(nid__gt=0).values_list(
@@ -31,12 +32,18 @@ def host(request):
 
 
 def test_ajax(request):
-    h = request.POST.get('hostname')
-    i = request.POST.get('ip')
-    p = request.POST.get('port')
-    b = request.POST.get('sel')
-    if h and len(h) > 5:
-        models.HOST.objects.create(hostname=h, ip=i, port=p, b_id=b)
-        return HttpResponse('OK')
-    else:
-        return HttpResponse('太短了！')
+    ret = {"status": True, 'error': None, 'data': None}
+    try:
+        h = request.POST.get('hostname')
+        i = request.POST.get('ip')
+        p = request.POST.get('port')
+        b = request.POST.get('sel')
+        if h and len(h) > 5:
+            models.HOST.objects.create(hostname=h, ip=i, port=p, b_id=b)
+        else:
+            ret['status'] = False
+            ret['error'] = '太短了！'
+    except Exception:
+        ret['status'] = False
+        ret['error'] = '请求错误！'
+    return HttpResponse(json.dumps(ret))
