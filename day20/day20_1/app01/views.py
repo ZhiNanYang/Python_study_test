@@ -28,3 +28,15 @@ def host(request):
         b = request.POST.get('b_id')
         models.HOST.objects.create(hostname=h, ip=i, port=p, b_id=b)
         return redirect('/cmdb/host/')
+
+
+def test_ajax(request):
+    h = request.POST.get('hostname')
+    i = request.POST.get('ip')
+    p = request.POST.get('port')
+    b = request.POST.get('sel')
+    if h and len(h) > 5:
+        models.HOST.objects.create(hostname=h, ip=i, port=p, b_id=b)
+        return HttpResponse('OK')
+    else:
+        return HttpResponse('太短了！')
