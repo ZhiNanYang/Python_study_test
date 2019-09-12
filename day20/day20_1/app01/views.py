@@ -13,7 +13,7 @@ def host(request):
     if request.method == "GET":
         v1 = models.HOST.objects.all()
         v2 = models.HOST.objects.filter(nid__gt=0).values(
-            'hostname', 'ip', 'port', 'b__caption')+
+            'hostname', 'ip', 'port', 'b__caption')
         # for row in v2:
         #     print(row['b__caption'])
         v3 = models.HOST.objects.filter(nid__gt=0).values_list(

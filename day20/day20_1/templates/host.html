@@ -14,7 +14,7 @@
             z-index: 100;
             opacity: 0.6;
         }
-        .add_modal{
+        .add_modal,.edit_modal{
             position: fixed;
             left: 50%;
             top: 100px;
@@ -50,7 +50,7 @@
                     <td>{{ i.port }}</td>
                     <td>{{ i.b.caption }}</td>
                     <td>
-                        <a>编辑</a>|<a>删除</a>
+                        <a id="edit">编辑</a>|<a id="delete">删除</a>
                     </td>
                 </tr>
             {% endfor %}
@@ -85,6 +85,22 @@
             <span id='error_msg' style="color: red"></span>
         </form>
     </div>
+
+    <div class="edit_modal hide">
+        <form action="/cmdb/host/" method="POST">
+            <input type="text" name="hostname" placeholder="主机名" />
+            <input type="text" name="ip" placeholder="IP" />
+            <input type="text" name="port" placeholder="端口" />
+            <select name="b_id">
+                {% for row in b_list %}
+                    <option value="{{ row.id }}">{{ row.caption }}</option>
+                {% endfor %}
+            </select>
+            <input id="ajax_edit" type="button" value="确认编辑" />
+            <input id="edit_cancel" type="button" value="取消" />
+        </form>
+    </div>
+
     <script src="/static/jquery-1.12.4.js"></script>
     <script type="text/javascript">
         $(function(){
@@ -113,6 +129,23 @@
                             $('#error_msg').text(obj.error)
                         }
                     }
+                })
+            });
+
+            $('#edit').click(function(event) {
+                $('.shadow,.edit_modal').removeClass('hide')
+            });
+
+            $('#edit_cancel').click(function(event) {
+                $('.shadow,.edit_modal').addClass('hide')
+            });
+
+            $('#ajax_edit').click(function(event) {
+                $.$.ajax({
+                    url: '/cmdb/edit_ajax',
+                    type: 'POST',
+                    data: {param1: 'value1'},
+                    
                 })
             });
         })
