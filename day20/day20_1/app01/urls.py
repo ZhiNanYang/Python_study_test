@@ -19,5 +19,7 @@ from app01 import views
 urlpatterns = [
     path('business/', views.business),
     path('host/', views.host),
+    path('edit_ajax/', views.edit_ajax),
+    path('del_ajax/', views.del_ajax),
     path('test_ajax/', views.test_ajax)
 ]

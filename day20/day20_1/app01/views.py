@@ -37,7 +37,7 @@ def test_ajax(request):
         h = request.POST.get('hostname')
         i = request.POST.get('ip')
         p = request.POST.get('port')
-        b = request.POST.get('sel')
+        b = request.POST.get('b_id')
         if h and len(h) > 5:
             models.HOST.objects.create(hostname=h, ip=i, port=p, b_id=b)
         else:
@@ -47,3 +47,30 @@ def test_ajax(request):
         ret['status'] = False
         ret['error'] = '请求错误！'
     return HttpResponse(json.dumps(ret))
+
+
+def edit_ajax(request):
+    ret = {"status": True, 'error': None, 'data': None}
+    try:
+        print(request.POST)
+        h = request.POST.get('hostname')
+        d = request.POST.get('id')
+        i = request.POST.get('ip')
+        p = request.POST.get('port')
+        b = request.POST.get('b_id')
+        print(d, h, i, p, b)
+        if h and len(h) > 5:
+            models.HOST.objects.filter(nid=d).update(hostname=h, ip=i, port=p, b_id=b)
+        else:
+            ret['status'] = False
+            ret['error'] = '太短了！'
+    except Exception:
+        ret['status'] = False
+        ret['error'] = '请求错误！'
+    return HttpResponse(json.dumps(ret))
+
+
+def del_ajax(request):
+    d = request.POST.get('nid')
+    models.HOST.objects.filter(nid=d).delete()
+    return HttpResponse()

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Business</title>
+    <title>Host</title>
     <style type="text/css">
         .shadow{
             position: fixed;
@@ -50,7 +50,7 @@
                     <td>{{ i.port }}</td>
                     <td>{{ i.b.caption }}</td>
                     <td>
-                        <a id="edit">编辑</a>|<a id="delete">删除</a>
+                        <a class="edit">编辑</a>|<a class="delete">删除</a>
                     </td>
                 </tr>
             {% endfor %}
@@ -68,12 +68,12 @@
 
     <div class="shadow hide"></div>
     <div class="add_modal hide">
-        <form action="/cmdb/host/" method="POST">
-            <div><input id="hostname" type="text" name="hostname" placeholder="主机名" /></div>
-            <div><input id="ip" type="text" name="ip" placeholder="IP" /></div>
-            <div><input id="port" type="text" name="port" placeholder="端口" /></div>
+        <form id='add_form' action="/cmdb/host/" method="POST">
+            <div><input type="text" name="hostname" placeholder="主机名" /></div>
+            <div><input type="text" name="ip" placeholder="IP" /></div>
+            <div><input type="text" name="port" placeholder="端口" /></div>
             <div>
-                <select id="sel" name="b_id">
+                <select  name="b_id">
                     {% for row in b_list %}
                         <option value="{{ row.id }}">{{ row.caption }}</option>
                     {% endfor %}
@@ -87,17 +87,21 @@
     </div>
 
     <div class="edit_modal hide">
-        <form action="/cmdb/host/" method="POST">
-            <input type="text" name="hostname" placeholder="主机名" />
-            <input type="text" name="ip" placeholder="IP" />
-            <input type="text" name="port" placeholder="端口" />
+        <form id="edit_form" action="/cmdb/host/" method="POST">
+            <input type="text" name="id" style="display: none" />
+            <input type="text" name="hostname" />
+            <input type="text" name="ip" />
+            <input type="text" name="port" />
             <select name="b_id">
                 {% for row in b_list %}
                     <option value="{{ row.id }}">{{ row.caption }}</option>
                 {% endfor %}
             </select>
-            <input id="ajax_edit" type="button" value="确认编辑" />
-            <input id="edit_cancel" type="button" value="取消" />
+            <div>
+                <input id="ajax_edit" type="button" value="确认编辑" />
+                <input id="edit_cancel" type="button" value="取消" />
+                <span id='error_msg1' style="color: red"></span>
+            </div>
         </form>
     </div>
 
@@ -116,11 +120,12 @@
                 $.ajax({
                     url: "/cmdb/test_ajax/",
                     type: "POST",
-                    data: {'hostname': $('#hostname').val(),
-                            'ip': $('#ip').val(),
-                            'port': $('#port').val(),
-                            'sel': $('#sel').val()
-                          },
+                    // data: {'hostname': $('#hostname').val(),
+                    //         'ip': $('#ip').val(),
+                    //         'port': $('#port').val(),
+                    //         'sel': $('#sel').val()
+                    //       },
+                    data: $('#add_form').serialize(),
                     success: function(data){
                         var obj = JSON.parse(data);
                         if(obj.status){
@@ -132,8 +137,18 @@
                 })
             });
 
-            $('#edit').click(function(event) {
-                $('.shadow,.edit_modal').removeClass('hide')
+            $('.edit').click(function(event) {
+                $('.shadow,.edit_modal').removeClass('hide');
+                var bid = $(this).parent().parent().attr('bid');
+                var nid = $(this).parent().parent().attr('hid');
+                var p = $(this).parent().prev().prev().text()
+                var i = $(this).parent().prev().prev().prev().text()
+                var h = $(this).parent().prev().prev().prev().prev().text()
+                $('#edit_form').find('input[name="id"]').val(nid)
+                $('#edit_form').find('input[name="hostname"]').val(h)
+                $('#edit_form').find('input[name="ip"]').val(i)
+                $('#edit_form').find('input[name="port"]').val(p)
+                $('#edit_form').find('select').val(bid);
             });
 
             $('#edit_cancel').click(function(event) {
@@ -141,12 +156,42 @@
             });
 
             $('#ajax_edit').click(function(event) {
-                $.$.ajax({
-                    url: '/cmdb/edit_ajax',
+                $.ajax({
+                    url: '/cmdb/edit_ajax/',
                     type: 'POST',
-                    data: {param1: 'value1'},
-                    
+                    // data: { 'hostname': $('#hostname1').val(),
+                    //         'nid': $('#id1').val(),
+                    //         'ip': $('#ip1').val(),
+                    //         'port': $('#port1').val(),
+                    //         'sel': $('#sel1').val()
+                    //       },
+                    data: $('#edit_form').serialize(),
+                    success: function(data){
+                        var obj = JSON.parse(data);
+                        if(obj.status){
+                            location.reload()
+                        }else {
+                            $('#error_msg1').text(obj.error)
+                        }
+                    }
                 })
+            });
+
+            $('.delete').click(function(event) {
+                var nid = $(this).parent().parent().attr('hid');
+                var i = $(this).parent().prev().prev().prev().text()
+                var h = $(this).parent().prev().prev().prev().prev().text()
+                var r = confirm("是否要删除主机：" + h +"ip为" + i);
+                if (r == true) {
+                    $.ajax({
+                        url: '/cmdb/del_ajax/',
+                        type: 'POST',
+                        data: {
+                                "nid": $(this).parent().parent().attr('hid')
+                              }
+                    })
+                    $(this).parent().parent().text('已删除');
+                }
             });
         })
     </script>
