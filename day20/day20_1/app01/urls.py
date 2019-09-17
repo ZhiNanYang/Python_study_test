@@ -21,5 +21,6 @@ urlpatterns = [
     path('host/', views.host),
     path('edit_ajax/', views.edit_ajax),
     path('del_ajax/', views.del_ajax),
+    path('app/', views.app),
     path('test_ajax/', views.test_ajax)
 ]

@@ -12,3 +12,12 @@ class HOST(models.Model):
     ip = models.GenericIPAddressField(protocol='ipv4', db_index=True)
     port = models.IntegerField()
     b = models.ForeignKey(to='Business', to_field='id', on_delete=models.CASCADE)
+
+
+class Application(models.Model):
+    name = models.CharField(max_length=32)
+    r = models.ManyToManyField('HOST')
+
+# class HostToApp(models.Model):
+#     hid = models.ForeignKey(to='HOST', to_field='nid', on_delete=models.CASCADE)
+#     aid = models.ForeignKey(to='Application', to_field='id', on_delete=models.CASCADE)

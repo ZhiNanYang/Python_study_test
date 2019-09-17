@@ -74,3 +74,10 @@ def del_ajax(request):
     d = request.POST.get('nid')
     models.HOST.objects.filter(nid=d).delete()
     return HttpResponse()
+
+
+def app(request):
+    if request.method == "GET":
+        app_list = models.Application.objects.all()
+        host_list = models.HOST.objects.all()
+        return render(request, 'app.html', {'app_list': app_list, 'host_list': host_list})

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>APP</title>
+    <style type="text/css">
+        .shadow{
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: black;
+            z-index: 100;
+            opacity: 0.6;
+        }
+        .add_modal{
+            position: fixed;
+            left: 50%;
+            top: 100px;
+            height: 300px;
+            width: 400px;
+            z-index: 101;
+            background: white;
+            margin-left: -200px;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>多对多</h1>
+    <input id="add_app" type="button" value="添加" />
+    <table border="1">
+        <thead>
+            <tr>
+                <th>应用名</th>
+                <th>主机列表</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in app_list %}
+                <tr>
+                    <td>{{ row.name }}</td>
+                    <td>
+                        {% for i in row.r.all %}
+                            <span style='background-color: #41A9E1'>{{ i.hostname }}</span>
+                        {% endfor %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="shadow hide"></div>
+    <div class="add_modal hide">
+        <form id='add_form' action="/cmdb/app/" method="POST">
+            <div><input type="text" name="appname" placeholder="应用名" /></div>
+            <div>
+                <select multiple="multiple">
+                    {% for n in host_list %}
+                        <option value="{{ n.id }}">{{ n.hostname }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <input type="submit" value="提交" />
+            <a id="ajax_submit" style="border: 1px solid #AAAAAA" >悄悄提交</a>
+            <input id="cancel" type="button" value="取消" />
+        </form>
+    </div>
+
+    <script src="/static/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('#add_app').click(function(event) {
+                $('.shadow,.add_modal').removeClass('hide')
+            });
+
+            $('#cancel').click(function(event) {
+                $('.shadow,.add_modal').addClass('hide')
+            });
+
+        })
+    </script>
+</body>
+</html>
