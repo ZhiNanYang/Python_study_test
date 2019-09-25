@@ -58,9 +58,9 @@
         <form id='add_form' action="/cmdb/app/" method="POST">
             <div><input type="text" name="appname" placeholder="应用名" /></div>
             <div>
-                <select multiple="multiple">
+                <select name="nidlist" multiple>
                     {% for n in host_list %}
-                        <option value="{{ n.id }}">{{ n.hostname }}</option>
+                        <option value="{{ n.nid }}">{{ n.hostname }}</option>
                     {% endfor %}
                 </select>
             </div>

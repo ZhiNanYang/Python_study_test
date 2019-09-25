@@ -81,3 +81,9 @@ def app(request):
         app_list = models.Application.objects.all()
         host_list = models.HOST.objects.all()
         return render(request, 'app.html', {'app_list': app_list, 'host_list': host_list})
+    elif request.method == 'POST':
+            appname = request.POST.get('appname')
+            nid_list = request.POST.getlist('nidlist')
+            obj = models.Application.objects.create(name=appname)
+            obj.r.add(*nid_list)
+            return redirect('/cmdb/app/')
